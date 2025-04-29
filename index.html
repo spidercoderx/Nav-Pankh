@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Pankh Premium Peanut Refined Oil</title>
+    <style>
+        /* Modern, clean styling */
+        :root {
+            --primary: #FFA500;
+            --secondary: #8B4513;
+            --light: #FFF8DC;
+            --dark: #333;
+            --white: #fff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1615368144592-6b7f7a7a6957?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+            margin: 0;
+        }
+        
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .hero-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .hero img {
+            width: 180px;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+        
+        .about {
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .products {
+            background-color: var(--white);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        
+        .contact {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header id="home">
+        <div class="hero">
+            <h1>Nav Pankh Premium Peanut Oil</h1>
+            <p>100% Pure, Naturally Refined Peanut Oil for Healthier Cooking and Better Taste</p>
+            <a href="#products" class="btn">Explore Our Products</a>
+            <img src="main nav pankh image.jpg">
+        </div>
+    </header>
+    
+    <section class="features" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Peanut Oil</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Heart Healthy">
+                    <h3>Heart Healthy</h3>
+                    <p>Rich in monounsaturated fats that help lower bad cholesterol and maintain good cholesterol levels.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="High Smoke Point">
+                    <h3>High Smoke Point</h3>
+                    <p>Perfect for frying and high-heat cooking without breaking down or producing harmful compounds.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2922/2922031.png" alt="Natural Flavor">
+                    <h3>Natural Flavor</h3>
+                    <p>Enhances the taste of your food without overpowering the natural flavors of your ingredients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Our Oil</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Premium Quality From Farm to Table</h3>
+                    <p>Nav Pankh peanut oil is extracted from the finest quality peanuts through a careful cold-pressing process that preserves all the natural nutrients and flavor. Our oil is then refined using modern, chemical-free methods to ensure purity and longevity.</p>
+                    <p>We work directly with local farmers who grow peanuts without harmful pesticides, ensuring you get the healthiest oil possible. Each batch is tested for quality and purity before packaging.</p>
+                    <a href="#contact" class="btn">Learn More</a>
+                </div>
+                <div class="about-img">
+                    <img src="family image.jpeg">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="large bottle.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nav Pankh Premium</h3>
+                        <p>Our signature cold-pressed peanut oil with maximum flavor retention and nutrient preservation.</p>
+                        <p>Available in 500ml, 1L, 2L, and 5L bottles</p>
+                        <a href="#contact" class="btn">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="medium bottle.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nav Pankh Cooking</h3>
+                        <p>Refined peanut oil specially formulated for high-temperature cooking and frying.</p>
+                        <p>Available in 1L, 2L, 5L, and 15L containers</p>
+                        <a href="#contact" class="btn">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="single image.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nav Pankh Organic</h3>
+                        <p>Certified organic peanut oil from pesticide-free farms for health-conscious consumers.</p>
+                        <p>Available in 500ml and 1L bottles</p>
+                        <a href="#contact" class="btn">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer">
+                    <h3>Sarah Johnson</h3>
+                    <p>"I've been using Nav Pankh peanut oil for all my cooking needs for the past year. The difference in flavor is remarkable, and my cholesterol levels have improved significantly!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Customer">
+                    <h3>Michael Chen</h3>
+                    <p>"As a restaurant owner, oil quality is crucial. GoldenPeak gives my dishes that authentic taste customers love, and it performs beautifully at high temperatures."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer">
+                    <h3>Priya Patel</h3>
+                    <p>"The organic version is my family's favorite. I feel good knowing I'm cooking with a pure, chemical-free oil that's also delicious."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <h3>Nav Pankh Premium Peanut Oil</h3>
+            <p>Pure Quality for Healthier Living</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook">fb</i></a>
+                <a href="#"><i class="fab fa-twitter">tw</i></a>
+                <a href="#"><i class="fab fa-instagram">in</i></a>
+                <a href="#"><i class="fab fa-linkedin">ln</i></a>
+            </div>
+            <p>&copy; 2023 Nav Pankh Oils. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
